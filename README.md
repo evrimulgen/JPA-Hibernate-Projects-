@@ -1,4 +1,4 @@
-# JPA-Hibernate-Projects-
+# JPA-Hibernate-Project-
 
 **Jpa-Hibernate-Project**
 
