@@ -41,7 +41,9 @@ gösterecek şekilde yeni bir class oluşturdum.Amacımız birden fazla classdak
 @Entity
 @NamedQueries({
 		// USER VE USERDETAİL BİLGİLERİNİ SORGUYLA ALDIK
-		@NamedQuery(name = "User_My.findById", query = "SELECT U FROM User_My U LEFT JOIN FETCH U.userDetail WHERE U.userId=:userId "),
+		
+		@NamedQuery(name = "User_My.findById", query =
+		"SELECT U FROM User_My U LEFT JOIN FETCH U.userDetail WHERE U.userId=:userId "),
 		@NamedQuery(name = "User_My.findByUserName", query = "SELECT U FROM User_My U  WHERE U.userName=:userName "),
 		@NamedQuery(name = "User_My.findWithUserDetailByUsername", query = "SELECT U FROM User_My U LEFT JOIN FETCH U.userDetail WHERE U.userName=:userName "),
 		@NamedQuery(name = "User_My.findUsers", query = "SELECT U FROM User_My U "),
@@ -78,10 +80,13 @@ public class User_My implements Serializable {
 
 @Entity
 @NamedQueries({
+
 		@NamedQuery(name = "UserDetail.findById", query = "SELECT UD FROM UserDetail UD WHERE UD.userDetailId=:userDetailId"),
 		@NamedQuery(name = "UserDetail.findByUsurname", query = "SELECT UD FROM UserDetail UD WHERE UD.user_My.userName=:userName"),
 		@NamedQuery(name = "UserDetail.findWithAddressByUserName", query = "SELECT UD FROM UserDetail UD LEFT JOIN FETCH UD.addresses WHERE UD.user_My.userName=:userName"),
 		@NamedQuery(name = "UserDetail.findWithAdvertisementByUserName", query = "SELECT UD FROM UserDetail UD LEFT JOIN  UD.advertisements A WHERE UD.user_My.userName=:userName") })
+		
+		
 public class UserDetail implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -127,11 +132,15 @@ public class UserDetail implements Serializable {
 
 @Entity
 @NamedQueries(
+
+
 		{ @NamedQuery(name = "Education.findEducations", query = "SELECT E FROM Education E"),
 		@NamedQuery(name = "Education.findById", query = "SELECT E FROM Education E WHERE E.educationId=:educationId"),
 		@NamedQuery(name = "Education.findWithAdvertisement", query = "SELECT E FROM Education E LEFT JOIN FETCH E.advertisements WHERE E.educationId=:educationId"),
 
 })
+
+
 public class Education implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -161,9 +170,11 @@ public class Education implements Serializable {
 @Entity
 @Table(name="advertisements")
 @NamedQueries({
+
 		@NamedQuery(name = "Advertisement.findById", query = "SELECT A FROM Advertisement A LEFT JOIN FETCH A.educations WHERE A.advertisementId=:advertisementId"),
 		@NamedQuery(name = "Advertisement.findByUserName", query = "SELECT A FROM Advertisement A LEFT JOIN   A.userDetail UD LEFT JOIN   UD.user_My U WHERE U.userName=:userName "),
 		@NamedQuery(name = "Advertisement.findAdvertisements", query = "SELECT A FROM Advertisement A ")})
+		
 public class Advertisement implements Serializable {
 
 	private static final long serialVersionUID = 1L;
