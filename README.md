@@ -17,7 +17,7 @@
 
 -Lombok ile işlemlerimizi daha efektif hale getirip kısalttık.
 
--Oracle sql server ile DB Connection işlemini gerçekleştirdik
+-Oracle sql server kullanarak  DB Connection, statement, resultset vb. işlemini gerçekleştirdik
 
 -jPA Hibernate ile tablo ilişkilerimizi kurduk ve yönettik
 
