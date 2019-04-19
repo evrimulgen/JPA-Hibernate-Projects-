@@ -16,7 +16,9 @@ import com.proje.jpaFactory.JpaFactoryImpl;
 import com.proje.model.User_My;
 import com.proje.model.UserInfo;
 import com.proje.repository.UserRepository;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class UserRepositoryImpl implements UserRepository {
 
 	private final Logger logger = (Logger) LogManager.getLogger();

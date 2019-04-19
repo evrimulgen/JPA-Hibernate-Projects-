@@ -3,7 +3,9 @@ package com.proje.repository;
 import java.util.List;
 
 import com.proje.model.Advertisement;
-
+/**
+ * @author MetinKalinsaz
+ */
 public interface AdvertisementRepository {
 
 	void saveAdvertisement(Advertisement advertisement);

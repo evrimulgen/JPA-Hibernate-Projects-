@@ -12,7 +12,9 @@ import com.proje.jpaFactory.JpaFactory;
 import com.proje.jpaFactory.JpaFactoryImpl;
 import com.proje.model.UserDetail;
 import com.proje.repository.UserDetailRepository;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class UserDetailRepositoryImpl implements UserDetailRepository {
 
 	private final Logger logger = (Logger) LogManager.getLogger();

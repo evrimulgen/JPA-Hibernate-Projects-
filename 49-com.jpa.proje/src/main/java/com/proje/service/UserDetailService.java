@@ -1,7 +1,9 @@
 package com.proje.service;
 
 import com.proje.model.UserDetail;
-
+/**
+ * @author MetinKalinsaz
+ */
 public interface UserDetailService {
 
 	void saveUserDetail(UserDetail userDetail);

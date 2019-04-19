@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.proje.model.User_My;
 import com.proje.model.UserInfo;
-
+/**
+ * @author MetinKalinsaz
+ */
 public interface UserService {
 
 	void saveUser(User_My user_My);

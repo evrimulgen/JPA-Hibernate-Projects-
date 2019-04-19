@@ -19,7 +19,9 @@ import com.proje.service.impl.AdvertisementServiceImpl;
 import com.proje.service.impl.EducationServiceImpl;
 import com.proje.service.impl.UserDetailServiceImpl;
 import com.proje.service.impl.UserServiceImpl;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class PersistTest {
 
 	private static AdvertisementService advertisementService = new AdvertisementServiceImpl();

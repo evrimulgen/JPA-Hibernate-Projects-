@@ -13,7 +13,9 @@ import com.proje.jpaFactory.JpaFactory;
 import com.proje.jpaFactory.JpaFactoryImpl;
 import com.proje.model.Education;
 import com.proje.repository.EducationRepository;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class EducationRepositoryImpl implements EducationRepository {
 
 	private final Logger logger = (Logger) org.apache.logging.log4j.LogManager.getLogger();
