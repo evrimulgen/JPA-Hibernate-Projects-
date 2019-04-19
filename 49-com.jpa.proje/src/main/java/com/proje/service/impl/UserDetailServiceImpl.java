@@ -4,7 +4,9 @@ import com.proje.model.UserDetail;
 import com.proje.repository.UserDetailRepository;
 import com.proje.repository.impl.UserDetailRepositoryImpl;
 import com.proje.service.UserDetailService;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class UserDetailServiceImpl implements UserDetailService {
 
 	private UserDetailRepository userDetailRepository = new UserDetailRepositoryImpl();

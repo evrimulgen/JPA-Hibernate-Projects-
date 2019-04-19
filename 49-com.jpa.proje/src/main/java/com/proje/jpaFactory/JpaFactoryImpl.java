@@ -5,6 +5,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+/**
+ * @author MetinKalinsaz
+ */
+
 public class JpaFactoryImpl implements JpaFactory {
 
 	private EntityManager entityManager = null;

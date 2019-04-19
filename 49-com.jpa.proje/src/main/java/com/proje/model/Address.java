@@ -5,7 +5,9 @@ import javax.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+/**
+ * @author MetinKalinsaz
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

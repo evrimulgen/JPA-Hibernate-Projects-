@@ -1,5 +1,7 @@
 package com.proje.service.impl;
-
+/**
+ * @author MetinKalinsaz
+ */
 import java.util.List;
 
 import com.proje.model.Education;

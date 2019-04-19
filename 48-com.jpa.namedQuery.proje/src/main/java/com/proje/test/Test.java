@@ -9,7 +9,10 @@ import com.proje.repository.ProductRepository;
 import com.proje.repository.impl.ProductRepositortImpl;
 
 public class Test {
-
+	/**
+	 * @author MetinKalinsaz
+	 */
+	
 	public static Date custom(int day, int month, int year) {
 
 		Calendar calendar = Calendar.getInstance();

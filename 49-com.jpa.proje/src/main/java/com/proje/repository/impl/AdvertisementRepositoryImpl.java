@@ -15,7 +15,9 @@ import com.proje.jpaFactory.JpaFactory;
 import com.proje.jpaFactory.JpaFactoryImpl;
 import com.proje.model.Advertisement;
 import com.proje.repository.AdvertisementRepository;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class AdvertisementRepositoryImpl implements AdvertisementRepository {
 
 	private Logger logger = LogManager.getLogger();
