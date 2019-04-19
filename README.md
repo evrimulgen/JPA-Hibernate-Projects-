@@ -8,11 +8,17 @@
 -Diger projelerin içerisinde readme kısmında projeleri özetlemeye çalışacagım .
 
 **Projede yer alan teknolojiler** 
+
 -Java ile  pojo kodlarımızı oluşturduk
+
 -Maven ile projemizi oluşturduk
+
 -Log4j ile loglama işlemlerini yaptık
+
 -Lombok ile işlemlerimizi daha efektif hale getirip kısalttık.
+
 -Oracle sql server ile DB Connection işlemini gerçekleştirdik
+
 -jPA Hibernate ile tablo ilişkilerimizi kurduk ve yönettik
 
 **Proje-Detayları**
