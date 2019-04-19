@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @author MetinKalýnsaz
+ * @author MetinKalinsaz
  */
 
 @Data
