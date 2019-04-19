@@ -1,7 +1,9 @@
 package com.proje.repository;
 
 import com.proje.model.UserDetail;
-
+/**
+ * @author MetinKalinsaz
+ */
 public interface UserDetailRepository {
 
 	void saveUserDetail(UserDetail userDetail);

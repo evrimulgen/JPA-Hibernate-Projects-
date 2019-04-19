@@ -6,7 +6,9 @@ import com.proje.model.Advertisement;
 import com.proje.repository.AdvertisementRepository;
 import com.proje.repository.impl.AdvertisementRepositoryImpl;
 import com.proje.service.AdvertisementService;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class AdvertisementServiceImpl implements AdvertisementService {
 
 	private AdvertisementRepository advertisementRepository = new AdvertisementRepositoryImpl();

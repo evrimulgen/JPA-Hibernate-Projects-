@@ -29,13 +29,16 @@ import javax.persistence.OneToOne;
 import com.proje.model.util.PhoneType;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-
+import lombok.Setter;
+/**
+ * @author MetinKalinsaz
+ */
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Getter
+@Setter
 @Entity
 @NamedQueries({
 		@NamedQuery(name = "UserDetail.findById", query = "SELECT UD FROM UserDetail UD WHERE UD.userDetailId=:userDetailId"),
@@ -56,24 +59,26 @@ public class UserDetail implements Serializable {
 
 	private Date birthOfDate;
 
-	@ElementCollection(fetch=FetchType.LAZY)
+	@ElementCollection(fetch = FetchType.LAZY)
 	@JoinTable(name = "userDetail_PhoneNumber", joinColumns = @JoinColumn(name = "userDetailId"))
 	@MapKeyColumn(name = "phoneType")
 	@Column(name = "phoneNumber")
 	@MapKeyEnumerated(EnumType.STRING)
 	private Map<PhoneType, String> phoneNumbers = new HashMap<PhoneType, String>();
 
-	// Embedable clasýmýz buranýn içine gömülecek farklý bir tablo olacak ama user_My
+	// Embedable clasýmýz buranýn içine gömülecek farklý bir tablo olacak ama
+	// user_My
 	// detaile baglý olacak
 	@Embedded
 	@ElementCollection(fetch = FetchType.LAZY)
 	@JoinTable(name = "userDetail_address", joinColumns = @JoinColumn(name = "UserDetailId"))
 	private List<Address> addresses = new ArrayList<Address>();
 
-	@OneToMany(mappedBy="userDetail",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE},fetch=FetchType.LAZY)
+	@OneToMany(mappedBy = "userDetail", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
+			CascadeType.REMOVE }, fetch = FetchType.LAZY)
 	private List<Advertisement> advertisements = new ArrayList<Advertisement>();
 
-	@OneToOne(fetch=FetchType.LAZY,mappedBy="userDetail")
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "userDetail")
 	private User_My user_My;
 
 	public UserDetail(String firstName, String lastName, Date birthOfDate) {
@@ -82,86 +87,11 @@ public class UserDetail implements Serializable {
 		this.birthOfDate = birthOfDate;
 	}
 
-	public Integer getUserDetailId() {
-		return userDetailId;
-	}
-
-	public void setUserDetailId(Integer userDetailId) {
-		this.userDetailId = userDetailId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Date getBirthOfDate() {
-		return birthOfDate;
-	}
-
-	public void setBirthOfDate(Date birthOfDate) {
-		this.birthOfDate = birthOfDate;
-	}
-
-	public Map<PhoneType, String> getPhoneNumbers() {
-		return phoneNumbers;
-	}
-
-	public void setPhoneNumbers(Map<PhoneType, String> phoneNumbers) {
-		this.phoneNumbers = phoneNumbers;
-	}
-
-	public List<Address> getAddresses() {
-		return addresses;
-	}
-
-	public void setAddresses(List<Address> addresses) {
-		this.addresses = addresses;
-	}
-
-	public List<Advertisement> getAdvertisements() {
-		return advertisements;
-	}
-
-	public void setAdvertisements(List<Advertisement> advertisements) {
-		this.advertisements = advertisements;
-	}
-
-	public User_My getUser_My() {
-		return user_My;
-	}
-
-	public void setUser_My(User_My user_My) {
-		this.user_My = user_My;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
 	@Override
 	public String toString() {
 		return "UserDetail [userDetailId=" + userDetailId + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", birthOfDate=" + birthOfDate + ", phoneNumbers=" + phoneNumbers + ", addresses=" + addresses
 				+ ", advertisements=" + advertisements + "]";
 	}
-
-
-	
-
-
-
-	
 
 }

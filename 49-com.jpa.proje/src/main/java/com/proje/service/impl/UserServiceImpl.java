@@ -7,7 +7,9 @@ import com.proje.model.UserInfo;
 import com.proje.repository.UserRepository;
 import com.proje.repository.impl.UserRepositoryImpl;
 import com.proje.service.UserService;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class UserServiceImpl implements UserService {
 
 	private UserRepository userRepository = new UserRepositoryImpl();

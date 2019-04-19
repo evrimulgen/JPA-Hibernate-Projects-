@@ -15,7 +15,9 @@ import com.proje.service.impl.AdvertisementServiceImpl;
 import com.proje.service.impl.EducationServiceImpl;
 import com.proje.service.impl.UserDetailServiceImpl;
 import com.proje.service.impl.UserServiceImpl;
-
+/**
+ * @author MetinKalinsaz
+ */
 public class FindTest {
 
 
@@ -34,9 +36,9 @@ public class FindTest {
 		                               //USER ILE ARAMA YAPTIK\\
 		                           //-----------------------------\\
 		//UserId ile arama yaptýk
-//		User_My user_My=userService.findById(7);
-//		
-//		System.out.println(user_My);
+		User_My user_My=userService.findById(7);
+		
+		System.out.println(user_My);
 		
 		//-------------------------------------------------------------------------------
 //		
@@ -73,8 +75,8 @@ public class FindTest {
 
 		//iki classdanda istedigimiz verileri çektik userinfo ile birleþtirme yaptýk bir nevi appened gibi
 		
-//		UserInfo info=userService.findUserInfoByUserName("mtn");
-//		System.out.println(info);
+		UserInfo info=userService.findUserInfoByUserName("mtn");
+		System.out.println(info);
 		
 		//-------------------------------------------------------------------------------
 		
@@ -94,9 +96,9 @@ public class FindTest {
 		                       //-----------------------------------\\
 		//userdetail ýd ile arama yaptýk
 		
-//		UserDetail detail=userDetailService.findById(4);
-//		
-//		System.out.println(detail);
+		UserDetail detail=userDetailService.findById(4);
+		
+		System.out.println(detail);
 //		
 		//-------------------------------------------------------------------------------
 
@@ -136,9 +138,9 @@ public class FindTest {
 		
 		//id ile arama yaptýk
 		
-//		Advertisement advertisement=advertisementService.findById(23);
-//		
-//		System.out.println(advertisement);
+		Advertisement advertisement=advertisementService.findById(23);
+		
+		System.out.println(advertisement);
 		
 		//-------------------------------------------------------------------------------
 
@@ -173,11 +175,11 @@ public class FindTest {
 		
 		//Tüm educationlarý bulduk
 		
-//		List<Education> educations=educationService.findEducations();
-//		
-//		for (Education education : educations) {
-//			System.out.println(education);
-//		}
+		List<Education> educations=educationService.findEducations();
+		
+		for (Education education : educations) {
+			System.out.println(education);
+		}
 //		
 		//-------------------------------------------------------------------------------
 

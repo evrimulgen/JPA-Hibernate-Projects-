@@ -3,7 +3,9 @@ package com.proje.repository;
 import java.util.List;
 
 import com.proje.model.Education;
-
+/**
+ * @author MetinKalinsaz
+ */
 public interface EducationRepository {
 
 	void saveEducation(Education education);

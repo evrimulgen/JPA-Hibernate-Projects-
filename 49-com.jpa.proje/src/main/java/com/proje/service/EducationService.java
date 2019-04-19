@@ -3,7 +3,9 @@ package com.proje.service;
 import java.util.List;
 
 import com.proje.model.Education;
-
+/**
+ * @author MetinKalinsaz
+ */
 public interface EducationService {
 
 	void saveEducation(Education education);
