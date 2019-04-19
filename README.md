@@ -2,6 +2,10 @@
 
 **Jpa-Hibernate-Project**
 
+-Hibernate ögrenirken yaptıgım çalışmaları commitledim 49 numaralı projemizde ögrendigim ilişkilerin çogunu uyguladım.
+
+-Diger projelerin içerisinde readme kısmında projeleri özetlemeye çalışacagım .
+
 -Projede Address clasımızı @Embedable olarak tanımladım ve UserDetail clasımızın içerisindeki
 
 ElementCollection içerisine gömülebilir olarak tuttum.Bu Adres bilgilerini UserDetail'e baglı
